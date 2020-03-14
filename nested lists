@@ -15,7 +15,9 @@ for i in nested_list:
     scores.append(i[1])
 
 min1 = min(scores)
-scores.pop(scores.index(min1))
+
+scores = [i for i in scores if i != min1] 
+
 min2 = min(scores)
 
 lista_nombres = list()
