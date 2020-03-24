@@ -6,17 +6,17 @@ def print_rangoli(size):
     
     n = 4*size -3
     
-    for i in range(0,size):
-        s = '-'.join(nlet[:i]) + "-" + nlet[i] + "-" + '-'.join(nlet[:i][::-1])
-        centered = s.center(n,"-")
+    for i in range(size):
+        s =  nlet[:i+1] + nlet[:i][::-1]
+        centered = ('-'.join(filter(None,s))).center(n,"-")
         
         print(centered)
         
     for i in reversed(range(0,size-1)):
-        s = '-'.join(nlet[:i]) + "-" + nlet[i] + "-" + '-'.join(nlet[:i][::-1])
-        centered = s.center(n,"-")
+        s =  nlet[:i+1] + nlet[:i][::-1]
+        centered = ('-'.join(filter(None,s))).center(n,"-")
         
         print(centered)
     
-n = 10
+
 print_rangoli(10)
